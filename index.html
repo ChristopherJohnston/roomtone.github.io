@@ -1,20 +1,87 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-GB">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Room Tone</title>
+  <meta name="description" content="A library for your demos, mixes, stems and voice memos, on your Mac and your iPhone.">
   <meta property="og:title" content="Room Tone">
-  <meta property="og:description" content="A songwriter's library of demos, mixes and stems.">
+  <meta property="og:description" content="A library for your demos, mixes, stems and voice memos, on your Mac and your iPhone.">
   <meta property="og:image" content="https://roomtone.captaincourageous.co.uk/icon.png">
+  <meta property="og:url" content="https://roomtone.captaincourageous.co.uk/">
   <link rel="icon" href="icon.png">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <main>
-    <img src="icon.png" alt="">
+<body class="home">
+  <header class="intro">
+    <img class="icon" src="icon.png" alt="" width="96" height="96">
     <h1>Room Tone</h1>
-    <p>A songwriter's library of demos, mixes, stems and voice memos, for Mac, iPhone, iPad and Apple Watch.</p>
+    <p class="lead">A library for your demos, mixes, stems and voice memos, on your Mac and your iPhone.</p>
+    <div class="get">
+      <div>
+        <a class="open" href="https://github.com/ChristopherJohnston/roomtone.github.io/releases/latest/download/RoomTone-macOS.zip">Download for Mac</a>
+        <p class="small">Version 0.11.2, 3 Nov 2026. For Macs with Apple silicon, macOS 13 or later.</p>
+      </div>
+      <p class="small">iPhone, iPad and Apple Watch: coming soon to the App Store.</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="feature wide">
+      <div class="words">
+        <h2>The library</h2>
+        <p>Keep each song in a folder, the way you bounce and export from Logic: its voice memos, its rough mixes, its stem exports. Room Tone lists every song with its tempo, key, tags, status, notes and lyrics, and plays them straight from the list.</p>
+        <p>Projects from older versions of Logic are read as they are, so the archive comes in too.</p>
+      </div>
+      <figure class="shot mac">
+        <picture>
+          <source srcset="images/mac-library-dark.webp" media="(prefers-color-scheme: dark)">
+          <img src="images/mac-library-light.webp" alt="The library: songs with their tempo, key, status and tags, and the one playing below." width="2400" height="1344" loading="lazy">
+        </picture>
+      </figure>
+    </section>
+
+    <section class="feature wide">
+      <div class="words">
+        <h2>The mixer</h2>
+        <p>Open a song to hear its parts. Solo and mute the stems, cycle a section, slow it down without changing the key, and switch to another version at the same point to compare them.</p>
+        <p>A/B plays two mixes in sync, one heard at a time, matched for loudness. When a mix is right, bounce it, without opening the project.</p>
+      </div>
+      <figure class="shot mac">
+        <picture>
+          <source srcset="images/mac-mixer-dark.webp" media="(prefers-color-scheme: dark)">
+          <img src="images/mac-mixer-light.webp" alt="The mixer: a song's stems as waveforms, with their levels, mutes and solos." width="2400" height="1344" loading="lazy">
+        </picture>
+      </figure>
+    </section>
+
+    <section class="feature">
+      <div class="words">
+        <h2>On your iPhone, iPad and Apple Watch</h2>
+        <p>The Mac publishes your libraries to iCloud Drive, with previews to play anywhere, and in the car with CarPlay. Tags, notes, lyrics and comments made on the phone go back to the Mac.</p>
+      </div>
+      <figure class="shot phones">
+        <picture>
+          <source srcset="images/iphone-song-dark.webp" media="(prefers-color-scheme: dark)">
+          <img src="images/iphone-song-light.webp" alt="A song on the iPhone: its versions, tags and notes." width="603" height="1311" loading="lazy">
+        </picture>
+        <picture>
+          <source srcset="images/watch-now-playing-dark.webp" media="(prefers-color-scheme: dark)">
+          <img class="watch" src="images/watch-now-playing-light.webp" alt="Now Playing on the Apple Watch." width="416" height="496" loading="lazy">
+        </picture>
+      </figure>
+    </section>
+
+    <section class="feature">
+      <div class="words">
+        <h2>Share links</h2>
+        <p>Send a bandmate a link to a song, at a moment in it. If they have the library, it opens in Room Tone, at that point, on the Mac or the phone.</p>
+      </div>
+    </section>
   </main>
+
+  <footer>
+    <p>Made by <a href="https://captaincourageous.co.uk">Captain Courageous</a>.</p>
+  </footer>
 </body>
 </html>

@@ -2,6 +2,7 @@
 :root {
   --bg: #ffffff;
   --panel: #f4f1ec;
+  --line: #e4dfd6;
   --text: #1f1d1a;
   --text-dim: #6b655c;
   --accent: #9a5b0f;
@@ -12,6 +13,7 @@
   :root {
     --bg: #171613;
     --panel: #1f1d1a;
+    --line: #2e2b26;
     --text: #f3efe8;
     --text-dim: #a39c90;
     --accent: #e8a04a;
@@ -21,18 +23,12 @@
 * { box-sizing: border-box; }
 body {
   margin: 0;
-  min-height: 100vh;
-  display: grid;
-  place-items: center;
-  padding: 24px 16px;
   background: var(--bg);
   color: var(--text);
   font: 15px/1.5 -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
 }
-main { max-width: 420px; text-align: center; }
-img { width: 72px; height: 72px; border-radius: 16px; }
-h1 { font-size: 22px; font-weight: 600; margin: 16px 0 4px; }
-p { margin: 0 0 4px; color: var(--text-dim); }
+a { color: var(--accent); }
+a:focus-visible { outline: 2px solid var(--text); outline-offset: 3px; border-radius: 4px; }
 .open {
   display: inline-block;
   margin: 20px 0 12px;
@@ -43,4 +39,63 @@ p { margin: 0 0 4px; color: var(--text-dim); }
   font-weight: 600;
   text-decoration: none;
 }
-.open:focus-visible { outline: 2px solid var(--text); outline-offset: 3px; }
+
+/* The song page, where share links land: one card in the middle. */
+body.link {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px 16px;
+}
+.link main { max-width: 420px; text-align: center; }
+.link img { width: 72px; height: 72px; border-radius: 16px; }
+.link h1 { font-size: 22px; font-weight: 600; margin: 16px 0 4px; }
+.link p { margin: 0 0 4px; color: var(--text-dim); }
+
+/* The home page. */
+.home { padding: 0 16px; }
+.intro {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 72px 0 56px;
+  text-align: center;
+}
+.icon { width: 96px; height: 96px; border-radius: 21px; }
+.intro h1 { font-size: 34px; line-height: 1.2; font-weight: 600; margin: 16px 0 8px; }
+.lead { font-size: 18px; color: var(--text-dim); margin: 0; }
+.get { margin-top: 12px; }
+.get .open { margin-bottom: 8px; }
+.small { font-size: 13px; color: var(--text-dim); margin: 0 0 4px; }
+
+main { max-width: 1080px; margin: 0 auto; }
+.feature {
+  display: grid;
+  gap: 24px 48px;
+  padding: 48px 0;
+  border-top: 1px solid var(--line);
+}
+.feature h2 { font-size: 22px; line-height: 1.3; font-weight: 600; margin: 0 0 8px; }
+.feature p { margin: 0 0 12px; max-width: 34em; }
+.shot { margin: 0; }
+.shot img { display: block; width: 100%; height: auto; }
+.mac img { border-radius: 10px; border: 1px solid var(--line); }
+.phones { display: flex; align-items: flex-end; justify-content: center; gap: 24px; }
+.phones picture:first-child { flex: 0 1 280px; }
+.phones picture:last-child { flex: 0 1 150px; }
+.phones img { border-radius: 24px; border: 1px solid var(--line); }
+.phones .watch { border-radius: 32px; }
+@media (min-width: 820px) {
+  .feature { grid-template-columns: 1fr 2fr; align-items: center; }
+  .feature:not(.wide) { grid-template-columns: 1fr 1fr; }
+  .feature .words { padding-bottom: 12px; }
+}
+
+footer {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 32px 0 48px;
+  border-top: 1px solid var(--line);
+  font-size: 13px;
+  color: var(--text-dim);
+}
+footer p { margin: 0; }
