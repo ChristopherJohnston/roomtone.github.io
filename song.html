@@ -15,7 +15,7 @@
 <body>
   <main>
     <img src="icon.png" alt="">
-    <h1>A song in Room Tone</h1>
+    <h1 id="title">A song in Room Tone</h1>
     <p id="library">Open it in Room Tone, with the library it's in.</p>
     <a class="open" id="open" href="roomtone://song">Open in Room Tone</a>
     <p>Room Tone is a songwriter's library of demos, mixes and stems, for Mac and iPhone.</p>
@@ -28,6 +28,14 @@
     document.getElementById("open").href = app;
     const name = query.get("name");
     if (name) document.getElementById("library").textContent = "In “" + name + "”.";
+    // What it is, as the app named it ("Night Drive – 19 Oct rough"); for a link made before
+    // links carried that, its version's file or folder name.
+    const version = (query.get("version") || "").split("/").pop().replace(/\.[^.]+$/, "").replace(/_/g, " ");
+    const title = query.get("title") || version;
+    if (title) {
+      document.getElementById("title").textContent = title;
+      document.title = title + " · Room Tone";
+    }
     // On a Mac, straight on to the app. On an iPhone or iPad with Room Tone the link opens the
     // app without this page; here, a tap on the button, as trying the app's link unasked shows
     // an error where it isn't installed.
