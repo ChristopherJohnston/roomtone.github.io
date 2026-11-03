@@ -79,11 +79,9 @@ main { max-width: 1080px; margin: 0 auto; }
 .shot { margin: 0; }
 .shot img { display: block; width: 100%; height: auto; }
 .mac img { border-radius: 10px; border: 1px solid var(--line); }
-.phones { display: flex; align-items: flex-end; justify-content: center; gap: 24px; }
-.phones picture:first-child { flex: 0 1 280px; }
-.phones picture:last-child { flex: 0 1 150px; }
-.phones img { border-radius: 24px; border: 1px solid var(--line); }
-.phones .watch { border-radius: 32px; }
+.phones { display: flex; justify-content: center; gap: 24px; }
+.phones picture { flex: 0 1 260px; }
+.phones img { border-radius: 28px; border: 1px solid var(--line); }
 @media (min-width: 820px) {
   .feature { grid-template-columns: 1fr 2fr; align-items: center; }
   .feature:not(.wide) { grid-template-columns: 1fr 1fr; }
