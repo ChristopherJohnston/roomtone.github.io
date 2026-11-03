@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A Song in Room Tone</title>
+  <meta property="og:title" content="A song in Room Tone">
+  <meta property="og:description" content="Open it in Room Tone, with the library it's in.">
+  <meta property="og:image" content="https://roomtone.captaincourageous.co.uk/icon.png">
+  <meta property="og:site_name" content="Room Tone">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="icon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <img src="icon.png" alt="">
+    <h1>A song in Room Tone</h1>
+    <p id="library">Open it in Room Tone, with the library it's in.</p>
+    <a class="open" id="open" href="roomtone://song">Open in Room Tone</a>
+    <p>Room Tone is a songwriter's library of demos, mixes and stems, for Mac and iPhone.</p>
+  </main>
+  <script>
+    // The same link in the app's own form. The library and song are only ever in the link, never
+    // sent anywhere.
+    const query = new URLSearchParams(location.search);
+    const app = "roomtone://song" + location.search;
+    document.getElementById("open").href = app;
+    const name = query.get("name");
+    if (name) document.getElementById("library").textContent = "In “" + name + "”.";
+    // On a Mac, straight on to the app. On an iPhone or iPad with Room Tone the link opens the
+    // app without this page; here, a tap on the button, as trying the app's link unasked shows
+    // an error where it isn't installed.
+    const touch = /iPhone|iPad|iPod|Android/.test(navigator.userAgent) || navigator.maxTouchPoints > 1;
+    if (query.get("song") && !touch) location.href = app;
+  </script>
+</body>
+</html>

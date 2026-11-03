@@ -1,0 +1,10 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["7F8Q5783VZ.app.roomtone.companion"],
+        "components": [{ "/": "/song*", "comment": "A share link to a song or a version of it." }]
+      }
+    ]
+  }
+}
