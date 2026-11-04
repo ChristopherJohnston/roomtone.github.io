@@ -7,3 +7,16 @@ The public pages for [Room Tone](https://roomtone.cloud), a songwriter's library
 - `CNAME`: served at roomtone.cloud.
 
 GitHub Pages publishes the `main` branch as it is: there's no build step, and `.nojekyll` keeps `.well-known` in the published site.
+
+## Screenshots
+
+`images/` holds the home page's screenshots, from the example library only (never a real one), as WebP, light and dark.
+
+- **The Mac:** drawn by the app's own test, at 2× (2880 × 1800), then `cwebp -q 85`:
+
+  ```sh
+  cargo run --release -p roomtone-library --example example_library
+  ROOMTONE_SCREENSHOTS=~/Desktop/shots cargo test -p roomtone-ui website_screenshots -- --ignored
+  ```
+
+- **The iPhone:** from the simulator (iPhone 16 Pro), launched with the app's launch settings on a copy of `apps/ios/Example/Example Songs` (`ROOMTONE_FOLDER`, `ROOMTONE_SONG`, `ROOMTONE_PLAY`, `ROOMTONE_MUTE`), the status bar set with `xcrun simctl status_bar … override --time 9:41`, and the appearance with `xcrun simctl ui … appearance light|dark`. Taken with `xcrun simctl io … screenshot`, halved, then `cwebp -q 85`.

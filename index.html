@@ -1,20 +1,82 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-GB">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Room Tone</title>
+  <meta name="description" content="A library for your demos, mixes, stems and voice memos, on your Mac and your iPhone.">
   <meta property="og:title" content="Room Tone">
-  <meta property="og:description" content="A songwriter's library of demos, mixes and stems.">
+  <meta property="og:description" content="A library for your demos, mixes, stems and voice memos, on your Mac and your iPhone.">
   <meta property="og:image" content="https://roomtone.cloud/icon.png">
+  <meta property="og:url" content="https://roomtone.cloud/">
   <link rel="icon" href="icon.png">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <main>
-    <img src="icon.png" alt="">
+<body class="home">
+  <header class="intro">
+    <img class="icon" src="icon.png" alt="" width="96" height="96">
     <h1>Room Tone</h1>
-    <p>A songwriter's library of demos, mixes, stems and voice memos, for Mac, iPhone, iPad and Apple Watch.</p>
+    <p class="lead">A library for your demos, mixes, stems and voice memos, on your Mac and your iPhone.</p>
+    <p class="soon">Coming soon for Mac, iPhone, iPad and Apple Watch.</p>
+  </header>
+
+  <main>
+    <section class="feature wide">
+      <div class="words">
+        <h2>The library</h2>
+        <p>Each song is a folder: the voice memo it started as, the DAW project it grew into, and every rough mix and stem export since, kept together. Room Tone lists every song with its tempo, key, status and tags, and plays them straight from the list.</p>
+        <p>Rate them, write notes and lyrics, and leave comments at a moment in a mix. Keep a library of your own and one for each band, and look through them apart or together.</p>
+      </div>
+      <figure class="shot mac">
+        <picture>
+          <source srcset="images/mac-library-dark.webp" media="(prefers-color-scheme: dark)">
+          <img src="images/mac-library-light.webp" alt="The library: songs with their tempo, key, status and tags, and the one playing below." width="2880" height="1800" loading="lazy">
+        </picture>
+      </figure>
+    </section>
+
+    <section class="feature wide">
+      <div class="words">
+        <h2>The mixer</h2>
+        <p>Open a song to hear its parts. Solo and mute the stems, cycle a section, slow it down without changing the key, and switch to another version at the same point to compare them.</p>
+        <p>A/B plays two mixes in sync, one heard at a time, matched for loudness. When a mix is right, bounce it, without opening the project.</p>
+      </div>
+      <figure class="shot mac">
+        <picture>
+          <source srcset="images/mac-mixer-dark.webp" media="(prefers-color-scheme: dark)">
+          <img src="images/mac-mixer-light.webp" alt="The mixer: a song's stems as waveforms, with their levels, mutes and solos." width="2880" height="1800" loading="lazy">
+        </picture>
+      </figure>
+    </section>
+
+    <section class="feature">
+      <div class="words">
+        <h2>On your iPhone, iPad and Apple Watch</h2>
+        <p>The Mac publishes your libraries to iCloud Drive, with previews to play anywhere, and in the car with CarPlay. Tags, notes, lyrics and comments made on the phone go back to the Mac.</p>
+      </div>
+      <figure class="shot phones">
+        <picture>
+          <source srcset="images/iphone-library-dark.webp" media="(prefers-color-scheme: dark)">
+          <img src="images/iphone-library-light.webp" alt="The library on the iPhone: songs with their tempo, key, status and rating, and a playlist." width="603" height="1311" loading="lazy">
+        </picture>
+        <picture>
+          <source srcset="images/iphone-song-dark.webp" media="(prefers-color-scheme: dark)">
+          <img src="images/iphone-song-light.webp" alt="A song on the iPhone: its versions, lyrics and sections, with one playing." width="603" height="1311" loading="lazy">
+        </picture>
+      </figure>
+    </section>
+
+    <section class="feature">
+      <div class="words">
+        <h2>With your band</h2>
+        <p>Share a band's library through iCloud Drive and everyone has the band's songs on their phone, and nothing else of yours. Comments, ratings and ideas show who left them; To Listen gathers the versions you haven't heard yet, and Activity what the band has been doing.</p>
+        <p>Send a bandmate a link to a song at a moment in it, which opens in Room Tone at that point. Or send the mix itself to anyone, through Messages, Mail or AirDrop.</p>
+      </div>
+    </section>
   </main>
+
+  <footer>
+    <p>Made by <a href="https://captaincourageous.co.uk">Captain Courageous</a>.</p>
+  </footer>
 </body>
 </html>
