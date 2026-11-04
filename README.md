@@ -4,6 +4,8 @@ The public pages for [Room Tone](https://roomtone.cloud), a songwriter's library
 
 - `privacy.html` and `support.html`: the privacy policy and support page App Store Connect links to, at `/privacy` and `/support`. The privacy page has to match the app's App Privacy answers there; change both together.
 - `song.html`: where share links (`/song?library=…&song=…`) land. On an iPhone or iPad with Room Tone, a link opens the app without loading this page. Anywhere else, the page hands the link on as `roomtone://song?…`. The library and song are only ever in the link; this page sends them nowhere.
+- `404.html`: what GitHub Pages shows for a path that isn't here. Its links start with `/`, as it is served at any depth.
+- `og.jpg`: the preview a link to the site shows in Messages, WhatsApp and Slack (1200 × 630): the icon, name and first sentence beside the Mac's mixer, rendered in a browser from a page of its own. `apple-touch-icon.png` (180 × 180, from the iPhone app's icon), `favicon.ico` and `favicon-32.png` (from `icon.png`) are the icons for tabs and Home Screens.
 - `.well-known/apple-app-site-association`: lets the iPhone app open `/song` links (universal links).
 - `CNAME`: served at roomtone.cloud.
 
@@ -23,4 +25,4 @@ GitHub Pages publishes the `main` branch as it is: there's no build step, and `.
 - **The iPhone:** from the simulator (iPhone 16 Pro), launched with the app's launch settings on a copy of `apps/ios/Example/Example Songs` (`ROOMTONE_FOLDER`, `ROOMTONE_SONG`, `ROOMTONE_PLAY`, `ROOMTONE_MUTE`), the status bar set with `xcrun simctl status_bar … override --time 9:41`, and the appearance with `xcrun simctl ui … appearance light|dark`. Taken with `xcrun simctl io … screenshot`, halved, then `cwebp -q 85`.
 - **The iPad:** the same way, on an iPad Pro 13-inch (iOS 27) in landscape with the sidebar shown, the song view chosen with the `songPane` setting (`tracks`, `lyrics`). Halved to 1376 × 1032, then `cwebp -q 85`.
 
-`style.css` is linked as `style.css?5`: browsers keep it for ten minutes, so when it changes, raise the number in every page, or a page can arrive with the old stylesheet.
+`style.css` is linked as `style.css?5`: browsers keep it for ten minutes, so when it changes, raise the number in every page, `404.html` included, or a page can arrive with the old stylesheet.
