@@ -63,9 +63,7 @@ body.link {
 .icon { width: 96px; height: 96px; border-radius: 21px; }
 .intro h1 { font-size: 34px; line-height: 1.2; font-weight: 600; margin: 16px 0 8px; }
 .lead { font-size: 18px; color: var(--text-dim); margin: 0; }
-.get { margin-top: 12px; }
-.get .open { margin-bottom: 8px; }
-.small { font-size: 13px; color: var(--text-dim); margin: 0 0 4px; }
+.soon { margin: 24px 0 0; font-weight: 600; color: var(--accent); }
 
 main { max-width: 1080px; margin: 0 auto; }
 .feature {
