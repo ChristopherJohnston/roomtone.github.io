@@ -101,12 +101,10 @@ main { max-width: 1080px; margin: 0 auto; }
 .prose p, .prose ul { margin: 0 0 12px; }
 .prose ul { padding-left: 20px; }
 .prose li { margin-bottom: 6px; }
-.prose code {
-  font: 13px ui-monospace, SFMono-Regular, Menlo, monospace;
-  background: var(--panel);
-  padding: 1px 5px;
-  border-radius: 4px;
-}
+/* Justified, with hyphens to keep the spacing even in a narrow column. */
+.prose p, .prose li { text-align: justify; hyphens: auto; }
+/* A folder's path: in a monospace font only, with no box round it to look like spaces. */
+.prose code { font: 0.9em ui-monospace, SFMono-Regular, Menlo, monospace; }
 
 footer {
   max-width: 1080px;
