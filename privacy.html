@@ -22,11 +22,11 @@
   <header class="page">
     <a href="/"><img class="icon small" src="icon.png" alt="Room Tone" width="48" height="48"></a>
     <h1>Privacy</h1>
-    <p class="dim">Updated 4 November 2026</p>
+    <p class="dim">Updated 11 November 2026</p>
   </header>
 
   <main class="prose">
-    <p>Room Tone keeps your songs in folders you choose, on your Mac and in your own iCloud Drive or OneDrive. It has no accounts, no servers of its own, no analytics, no advertising and no tracking. We don't collect anything about you or your music.</p>
+    <p>Room Tone keeps your songs in folders you choose, on your Mac and in your own iCloud Drive or OneDrive. It has no accounts, no analytics, no advertising and no tracking. We don't collect anything about you or your music. The one thing that uses a server of ours is Room Tone Cloud, which is off unless a library's owner turns it on, and can't read your songs; what it keeps is below.</p>
 
     <h2>Your library</h2>
     <p>Each library is a folder you add to Room Tone for Mac. Its songs, recordings, notes, lyrics, ratings and comments stay in that folder. For the iPhone, iPad and Apple Watch, the Mac copies previews and song details into a folder in iCloud Drive or OneDrive, and the apps read them from there. Apple's or Microsoft's privacy terms cover what those services store.</p>
@@ -38,12 +38,18 @@
       <li><strong>Microphone:</strong> to record song ideas. Recordings are saved in your library.</li>
       <li><strong>Location:</strong> to note where you recorded an idea. The place's name and coordinates are kept with the idea in your library. The name comes from Apple's location service, which receives the coordinates to look it up.</li>
       <li><strong>Speech recognition:</strong> to name an idea from what you say at its start. This happens on the device where it can; on devices that can't, Apple's speech recognition service hears the start of the recording.</li>
-      <li><strong>Notifications:</strong> made on the device itself, from your libraries. No server sends them.</li>
+      <li><strong>Notifications:</strong> made on the device itself, from your libraries. For a library with Room Tone Cloud on, they also come as pushes, through Apple's notification service (see below).</li>
     </ul>
     <p>Siri and Shortcuts actions run on the device. Ideas recorded on Apple Watch go to the iPhone through Apple's connection between them.</p>
 
     <h2>On the Mac</h2>
     <p>Room Tone for Mac includes an optional MCP server, which lets an AI assistant you connect to it, such as Claude, read your libraries. It does nothing until you set it up. What the assistant reads goes to that assistant's provider, under its own terms.</p>
+
+    <h2>Room Tone Cloud</h2>
+    <p>Room Tone Cloud is off unless a library's owner turns it on, in Room Tone for Mac. Then everyone in that library hears within seconds when someone adds a version, records an idea, comments, reacts to a version, rates a song or changes its words. It needs no account and no sign-in: anyone who can open the library's shared folder can join, with a secret kept in that folder.</p>
+    <p>What happened is sealed on your device with a key made from that secret, which our service never has, so it can't read song titles, names, comments, words or anything else from your library. It passes the sealed message on, through Apple's notification service, to the other devices in the library, which open it.</p>
+    <p>What the service keeps: a random identifier for each device, its push token, whether it's a Mac or an iPhone or iPad, and how many messages it has sent in the hour, to limit them; which devices are in which library, by the library's random identifier; a code for each person that tells one person's devices from another's without saying who they are; each device's notification settings for each library; and the sealed messages for 30 days, with when each was sent and what kind of thing it was (a comment, a rating and so on). It keeps no names, email addresses, titles, words or recordings. It runs on Amazon Web Services in the United States, and its error logs are kept for 14 days.</p>
+    <p>When someone is taken off a library's shared folder, its owner resets the library's secret in Room Tone for Mac; they can't join again or hear any more. To have a device's records removed from the service, email us.</p>
 
     <h2>Share links</h2>
     <p>A link to a song carries the library's and the song's identifiers in the link itself, and can carry the library's name, the song's title, a version and a time. Anyone you send it to can read those. The page a link opens on this site reads them in your browser and sends them nowhere.</p>
